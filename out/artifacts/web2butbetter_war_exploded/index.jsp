@@ -11,165 +11,27 @@
 <head>
   <meta charset="utf-8">
   <title>Web, Lab1, Kolesnikov Nikita</title>
-  <link rel="shortcut icon" href="resouces/pictures/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="resources/pictures/favicon.ico" type="image/x-icon">
 
   <style>
-    @font-face {
-      font-family: "Trintel";
-      src: url("resouces/fonts/Trintel.ttf");
-    }
-
-    * {
-      font-family: "Trintel", serif;
-      text-align: center;
-      font-size: 1.05em;
-      text-shadow: 1px 2px 2px black;
-      color:#efbbcf;
-    }
-
-    aside{
-      padding: 0px;
-      float: left;
-    }
-
-
-    header{
-      text-align: center;
-      font-size: 1.05em;
-      top: 0;
-    }
-
-    footer{
-      font-size: 1.05em;
-      bottom: 0;
-    }
-
-    header, footer{
-      width: 100%;
-      position: fixed;
-      color:#efbbcf;
-      background-color: #8675a9;
-      left: 0;
-    }
-
-
-
-    body {
-      background-color: #c3aed6;
-      padding-top: 9%;
-      padding-bottom: 10%;
-    }
-
-    main{
-      background-color: #c3aed6;
-      top: 5%;
-      margin-left: 10%;
-      margin-right: 10%;
-      bottom: 5%;
-    }
-    .container{
-      text-align: center;
-
-    }
-
-
-    #credit > a {
-      text-align: center;
-      font-size: 25px;
-      text-decoration: none;
-      color: #efbbcf;
-    }
-
-    #resultTable td, .radio td{
-      border-right: 1px solid #8675a9;
-      font-size: 20px;
-    }
-
-    #resultTable td, #resultTable th, .radio_btn td, .radio_btn th{
-      text-align: center;
-      padding: 8px;
-    }
-
-    input[type=button]{
-      background-color: #8675a9;
-      padding: 0;
-      width: 120px;
-      height: 50px;
-      box-sizing: border-box;
-      border-collapse: collapse;
-      border-radius:6px;
-      text-align: center;
-      font-size: 20px;
-      cursor: pointer;
-    }
-
-    .flying{
-      position: fixed;
-      bottom: 50%;
-      right: 1%;
-    }
-
-    input[type=text]{
-      background-color: #8675a9;
-      color: #efbbcf;
-      padding: 0;
-      width: 140px;
-      height: 30px;
-      box-sizing: border-box;
-      border-collapse: collapse;
-      border-radius:6px;
-      text-align: center;
-      font-size: 20px;
-      cursor: text;
-    }
-
-    .radio {
-      margin-left: 40%;
-      margin-right: 40%;
-    }
-
-    .radio input[type=radio]{
-      text-align: center;
-      cursor: pointer;
-      font-size: 20px;
-    }
-
-    .choicebox{
-      margin-left: 40%;
-      margin-right: 40%;
-    }
-
-    .input_Y{
-      margin-left: 40%;
-      margin-right: 40%;
-    }
-
-    #resultTable{
-      margin-left: 35%;
-      margin-right: 35%;
-
-    }
-
-
-
-
+    <%@include file="resources/css/style.css"%>
   </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  <script src="resouces/scripts/script.js"> </script>
+  <script src="resources/scripts/script.js"> </script>
 
 </head>
 <body>
-<img class="flying" src="resouces/pictures/fairy1.gif" width="100px" height="200px">
+<img class="flying" src="resources/pictures/fairy1.gif" width="100px" height="200px">
 <header>
   <h1>Веб-программирование, Лаб. 1, Вариант 2109</h1>
-  <div><p id="credit"><img src="resouces/pictures/hearts.gif" width="40" height="20"> <a id = "git" href="https://github.com/roclh" title="Перейти к профилю Github разработчика">Колесников Никита Алексеевич, P3210</a> <img src="resouces/pictures/hearts.gif" width="40" height="20"></p></div>
+  <div><p id="credit"><img src="resources/pictures/hearts.gif" width="40" height="20"> <a id = "git" href="https://github.com/roclh" title="Перейти к профилю Github разработчика">Колесников Никита Алексеевич, P3210</a> <img src="resouces/pictures/hearts.gif" width="40" height="20"></p></div>
 </header>
 <aside>
-  <div><img src="resouces/pictures/barbie2.gif" width = 100px height = 500px></div>
-  <div><img src="resouces/pictures/barbie2.gif" width = 100px height = 500px></div>
-  <div><img src="resouces/pictures/barbie2.gif" width = 100px height = 500px></div>
-  <div><img src="resouces/pictures/barbie2.gif" width = 100px height = 500px></div>
+  <div><img src="resources/pictures/barbie2.gif" width = 100px height = 500px></div>
+  <div><img src="resources/pictures/barbie2.gif" width = 100px height = 500px></div>
+  <div><img src="resources/pictures/barbie2.gif" width = 100px height = 500px></div>
+  <div><img src="resources/pictures/barbie2.gif" width = 100px height = 500px></div>
 </aside>
 <main>
 
@@ -186,7 +48,7 @@
       радиус) должны блокироваться.</h5>
 
   </div>
-  <div></div><img src="resouces/pictures/quest.jpg" ></div>
+  <div></div><img src="resources/pictures/quest.png" ></div>
   <p></p>
   <div class = "container form">
     <form id="main-form">
@@ -245,7 +107,7 @@
     </table>
   </div>
   <div>
-    <img src="resouces/pictures/barbie1.gif" width = 50% height = 50%>
+    <img src="resources/pictures/barbie1.gif" width = 50% height = 50%>
   </div>
 </main>
 <footer>ИТМО<br>2020</footer>
