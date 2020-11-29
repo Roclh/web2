@@ -109,7 +109,6 @@ input[type=text]{
 
 .radio {
     margin-left: 40%;
-    margin-right: 40%;
 }
 
 .radio input[type=radio]{
@@ -120,13 +119,14 @@ input[type=text]{
 
 .choicebox{
     margin-left: 40%;
-    margin-right: 40%;
 }
 
-.input_Y{
-    margin-left: 40%;
-    margin-right: 40%;
+.choicebox input[type=button]{
+    width: 30px;
+    height: 30px;
+    text-align: center;
 }
+
 
 #resultTable{
     margin-left: 35%;

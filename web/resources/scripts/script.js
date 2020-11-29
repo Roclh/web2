@@ -1,5 +1,21 @@
 let x,y,r, responce = '';
 
+function setR(value){
+    r = value;
+}
+
+function reset(){
+    x=null;
+    y=null;
+    r=null;
+    responce='';
+    HTMLFormElement.reset()
+}
+
+function checkR(){
+    return r==null;
+}
+
 function check(){
     let choose = false;
     let fail = false;
@@ -13,19 +29,7 @@ function check(){
     }
 
 
-    let check = false;
-    for(let i = 0; i<5; i++){
-        if(document.getElementById('R' + i.toString()).checked && !check){
-            check = true;
-            r = document.getElementById('R'+i.toString()).value;
-        }else if(document.getElementById('R' + i.toString()).checked && check){
-            fail = true;
-            responce += 'Вы выбрали больше одного значения R \n';
-            break;
-        }
-    }
-
-    if(!check){
+    if(r === ''){
         fail = true;
         responce += 'Выберите R \n';
     }
@@ -46,10 +50,13 @@ function check(){
         if(!/^(-?\d+)([,.]\d+)?$/.test(y)){
             responce += 'Некорректный ввод Y \n';
             fail = true;
-        }else if( y<= -3 || y >= 5){
+        }else if( y<= -3 || y >= 3){
             responce += 'Y вне диапозона \n';
             fail = true;
         }
+    }
+    if(r==null){
+        responce += 'Выберите R\n';
     }
 
     if (fail){
@@ -59,10 +66,22 @@ function check(){
     } return true;
 }
 
+function point_draw(x_value, y_value, r, flag) {
+    let canvas = document.getElementById('area');
+    let context = canvas.getContext('2d');
+    let x = x_value * 100 / r + 150;
+    let y = 150 - y_value * 100 / r;
+    if (flag) context.fillStyle = "green";
+    if (!flag) context.fillStyle = "red";
+    context.beginPath();
+    context.arc(x, y, 2, 0, Math.PI * 2, false);
+    context.fill();
+    context.stroke();
+}
+
 function ask() {
     if(check())
     {
-        jQuery("#resultTable tr").remove();
-        jQuery.post('check.php', {'X':x, 'Y':y, 'R':r}, function (data) {document.getElementById('resultTable').innerHTML+=data;});
+        sendRequest(x,y,r, "button");
     }
 }
