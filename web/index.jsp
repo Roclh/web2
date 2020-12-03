@@ -21,8 +21,18 @@
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script src="resources/scripts/sender.js"></script>
-    <script src="resources/scripts/script.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/scripts/sender.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/scripts/script.js"></script>
+    <script>
+
+        $(document).ready(function (){
+
+                <% for(Cell cell : table.getTable()){%>
+                draw(<%= cell.getX() %>, <%= cell.getY() %>, <%= cell.getR() %>, <%= cell.isResult() %>);
+                <%} %>
+        });
+
+    </script>
 
 </head>
 <body>
@@ -92,7 +102,7 @@
     </div>
     <div></div>
     <canvas id='area' height=300px width=300px></canvas>
-    <script src="resources/scripts/image.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/scripts/image.js"></script>
     </div>
     <p></p>
     <div class="container form">

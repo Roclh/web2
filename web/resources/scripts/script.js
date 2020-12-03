@@ -12,9 +12,6 @@ function reset(){
     HTMLFormElement.reset()
 }
 
-function checkR(){
-    return r==null;
-}
 
 function check(){
     let choose = false;
@@ -66,18 +63,7 @@ function check(){
     } return true;
 }
 
-function point_draw(x_value, y_value, r, flag) {
-    let canvas = document.getElementById('area');
-    let context = canvas.getContext('2d');
-    let x = x_value * 100 / r + 150;
-    let y = 150 - y_value * 100 / r;
-    if (flag) context.fillStyle = "green";
-    if (!flag) context.fillStyle = "red";
-    context.beginPath();
-    context.arc(x, y, 2, 0, Math.PI * 2, false);
-    context.fill();
-    context.stroke();
-}
+
 
 function ask() {
     if(check())
