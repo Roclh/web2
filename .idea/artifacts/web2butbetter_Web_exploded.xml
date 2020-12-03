@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="web2butbetter:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/web2butbetter_war_exploded</output-path>
+  <artifact type="exploded-war" name="web2butbetter:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/web2butbetter_Web_exploded</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="web2butbetter/web/Web" />
       <element id="directory" name="WEB-INF">

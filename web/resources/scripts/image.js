@@ -81,24 +81,12 @@ canvas.onmousedown = function (e){
         let basis = 100 / r;
         let cx = ((x - 150) / basis);
         let cy = ((150 - y) / basis);
-        alert(x+" "+y+" "+" "+cx+" "+cy);
+        //alert(x+" "+y+" "+" "+cx+" "+cy);
         sendRequest(cx, cy, r, "canvas");
     }else{
         alert("Выберите R");
     }
 }
-//
-// function send(event){
-//     if(checkR()){
-//         let rect = event.currentTarget.getBoundingClientRect();
-//         let x = event.clientX - rect.left;
-//         let y = event.clientY - rect.top;
-//         let basis = 100 / r;
-//         let cx = ((x - 150) / basis);
-//         let cy = ((150 - y) / basis);
-//         sendRequest(cx, cy, r, "canvas");
-//     }
-// }
 
 function draw(x_val, y_val, r, flag){
     let x = x_val * 100/ r +150;
